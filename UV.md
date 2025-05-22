@@ -1,8 +1,8 @@
 # UV를 이용한 파이썬 개발환경 구축 및 관리
-# ```NOTE : 최신버전(2025-05-19) 기준으로 일부 명령어들이 바뀌어 업데이트 필요```
 
 - 작성자 : [Jinu Cho](https://github.com/jinucho)
 - 작성일자 : 2025-05-22
+- UV version : 0.7.6(2025-05-19)
 
 ## Description : 
 - UV 특징 : pip보다 빠르고 더 안정적인 의존성 관리를 제공
@@ -72,17 +72,17 @@ uv init
     3.11
     ```
 
-- 3. requirements.txt
+- 3. requirements.txt (0.7.6 ver 기준 생성되지 않음)
     - 프로젝트의 의존성 목록
     - 초기에는 비어있음
-    - ```uv pip freeze``` 로 현재 의존성을 업데이트 함
+    - ```uv export --format requirements-txt > requirements.txt``` 로 현재 의존성을 업데이트 함
 
-- 4. requirements-dev.txt
+- 4. requirements-dev.txt (0.7.6 ver 기준 생성되지 않음)
     - 개발 환경에서만 필요한 의존성 목록을 저장하는 파일
     - 초기에는 비어있음
-    - ```uv pip freeze --dev``` 로 업데이트 함
+    - ```uv export --format requirements-txt --dev > requirements-dev.txt``` 로 업데이트 함
 
-- 5. .venv/ 디렉토리
+- 5. .venv/ 디렉토리 (0.7.6 ver 기준 생성되지 않음)
     - 가상환경이 생성되는 디렉토리
     - Python 인터프리터와 설치된 패키지들이 저장 됨
     - 주요 하위 디렉토리:
@@ -90,7 +90,7 @@ uv init
         - lib/ : 설치된 패키지들이 위치
         - include/ : C확장 모듈 헤더 파일들이 위치
 
-- 6. uv.lock
+- 6. uv.lock (0.7.6 ver 기준 생성되지 않음)
     - 의존성의 정확한 버전을 잠그는 파일
     - ```uv lock``` 명령으로 생성/업데이트 됨
     - 예시:
