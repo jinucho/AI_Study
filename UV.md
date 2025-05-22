@@ -76,6 +76,7 @@ uv init
     - 프로젝트의 의존성 목록
     - 초기에는 비어있음
     - ```uv export --format requirements-txt > requirements.txt``` 로 현재 의존성을 업데이트 함
+    - ```uv pip freeze > requirements.txt``` 로 현재 의존성을 업데이트 함(단, uv add --dev 로 설치한 개발용 라이브러리도 저장 됨)
 
 - 4. requirements-dev.txt (0.7.6 ver 기준 생성되지 않음)
     - 개발 환경에서만 필요한 의존성 목록을 저장하는 파일
